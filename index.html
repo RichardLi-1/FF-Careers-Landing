@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ffcareersfavicon.svg" type="image/x-icon">
+    <title>FF Careers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $("#head").load("header.html");
+        });
+    </script>-->
+
+    <a href="index.html" style="text-decoration: none;">
+        <header class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="FF Careers Logo">
+                <span class="title">FF Careers</span>
+            </div>
+            <nav>
+                <a href="https://app.ffcareers.app/login" style="text-decoration: none; color:white;" class="login">Log In</a>
+            </nav>
+        </header>
+    </a>
+
+    <!--------------------------------HERO-------------------------------->
+    <section class="hero">
+        <h1>The to-do list for <br><span class="highlight">career discovery</span></h1>
+        <p>Future Forward Careers uses AI to bridge everyday <br> productivity and vocation discovery</p>
+        <a href="https://app.ffcareers.app/login" class="cta-button">Log In</a>
+    </section>
+
+    <section class="carousel">
+        <div class="carousel-image">
+            <img src="carousel.png" alt="Carousel">
+        </div>
+    </section>
+
+    <div class="transition-section"></div>
+
+    <section class="cec-feature">
+        <p class="cec-text">As featured by</p>
+        <a href="https://youtu.be/l7N0IxMckt4" target="_blank"><img src="cec.png" alt="Career Education Council logo"
+                class="cec-logo"></a>
+    </section>
+
+    <div style="background-color: white;">
+        <section class="steps-section">
+            <div class="steps-left">
+                <p class="steps-subtitle">What is FF Careers?</p>
+                <h2 class="steps-title">Not your run-of-the-mill career test.</h2>
+                <ul class="steps-list">
+                    <li><span class="step-text">Organize and complete everyday tasks</span></li>
+                    <li><span class="step-text">Receive candid vocation-revealing questions</span></li>
+                    <li><span class="step-text">Save hundreds of hours on career experimentation</span></li>
+                </ul>
+
+                
+            </div>
+            <div class="steps-right">
+                <img id="step-image" src="step1.png" alt="Step 1 Image" class="steps-image">
+            </div>
+
+        </section>
+
+        <section class="steps-section" style="margin-top:-150px;">
+            <h2 class="steps-title">Harness the power and purpose of</h2>
+        </section>
+        <img src="ai.png" style="max-width:80vw; margin-top: -138px; max-height:200px;">
+
+        <section class="steps-section" style="margin-top:-100px;">
+            <h3>Future Forward Careers uses a unique Artificial Intelligence algorithm to match you with careers based on task completion. Let AI do the work of finding your perfect career.</p>
+        </section>
+
+        <section class="next-section" class="whitebg" style="margin-top:-100px;">
+            <!---<img src="ios.png" style="max-width:80vw;">-->
+            <!---<h1>iOS Coming Soon.</h1>-->
+        </section>
+        
+        <section class="next-section" class="whitebg" style="margin-top:-100px;">
+            <h1>Get the clearest picture of <br> your vocation</h1>
+            <a href="https://app.ffcareers.app/login" class="next-button">Try it now</a>
+        </section>
+
+    </div>
+
+    <!--------------------------------add the arrow somewhere-------------------------------->
+
+
+    <!--------------------------------TO BE MOVED TO A FOOTER FILE-------------------------------->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="transparent.png" alt="Future Forward Logo" class="footer-logo">
+                <p>Get the latest Future Forward updates</p>
+                <div class="email-form">
+                    <input type="email" placeholder="What's your email?" class="email-input">
+                    <button class="demo-button">Keep updated</button>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><strong>Company</strong></li>
+                    <li><a target="_blank" href="mailto:contact@futureforward.info">Contact</a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/futureforward.info">Instagram</a></li>
+                    <li><a target="_blank"
+                            href="https://www.linkedin.com/company/future-forward-initiative">LinkedIn</a></li>
+                            <!----<li><a target="_blank" href="https://www.tiktok.com/@futureforward.info">TikTok</a></li>-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-overlay-row">
+                <img src="greyedout.png" alt="Future Forward Logo" class="footer-overlay-logo">
+                <div class="footer-overlay-text">Future Forward</div>
+            </div>
+
+            <div class="footer-legal">
+                <div class="footer-links">
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+                <p>© Future Forward 2026. All Rights Reserved.</p>
+            </div>
+    </footer>
+
+    <!-- ✅ Load Your Firebase & Auth Scripts -->
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="auth.js"></script>
+
+    <script>
+        const steps = document.querySelectorAll(".step-text");
+        steps.forEach((step, index) => {
+  step.style.cursor = "pointer"; // make it look clickable
+  step.addEventListener("click", () => {
+    currentStep = index;
+    cycleSteps(); // manually trigger the change
+    resetCycleInterval(); // reset the 6-second interval
+  });
+});
+        const image = document.getElementById("step-image");
+        const imageSources = ["step1.png", "step2.png", "step3.png"];
+        let currentStep = 0;
+
+        function cycleSteps() {
+            // Remove bolding from all steps
+            steps.forEach(step => step.classList.remove("active"));
+            steps[currentStep].classList.add("active");
+
+            steps[currentStep].style.fontize = "bold";
+
+            // Change the image
+            image.src = imageSources[currentStep];
+
+            // Move to the next step
+            currentStep = (currentStep + 1) % steps.length;
+        }
+
+        // Initial call
+        cycleSteps();
+
+        // Run every 6 seconds
+        setInterval(cycleSteps, 6000);
+    </script>
+
+</body>
+
+</html>
