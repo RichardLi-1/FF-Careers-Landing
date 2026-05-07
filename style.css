@@ -96,6 +96,30 @@ body {
     opacity: 0.8;
 }
 
+.sticky-cta {
+    position: fixed;
+    top: 20px;
+    right: 32px;
+    z-index: 1000;
+    font-size: 16px;
+    padding: 12px 28px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.sticky-cta.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.sticky-cta:hover {
+    opacity: 0.85;
+}
+
 /* Carousel Wrapper */
 .carousel {
     max-width: 2000px; /* Set a reasonable max width */

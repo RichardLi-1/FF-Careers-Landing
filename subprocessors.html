@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ffcareersfavicon.svg" type="image/x-icon">
+    <title>Subprocessors - FF Careers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .subprocessors-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .subprocessors-table th {
+            text-align: left;
+            padding: 0.6rem 1rem;
+            color: #888;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .subprocessors-table td {
+            padding: 1rem 1rem;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: middle;
+            color: #333;
+        }
+
+        .subprocessors-table td:first-child {
+            font-weight: 600;
+            color: #111;
+            white-space: nowrap;
+        }
+
+        .subprocessors-table td a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .subprocessors-table td a:hover {
+            text-decoration: underline;
+        }
+
+        .subprocessors-intro {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .subprocessors-date {
+            color: #999;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" style="text-decoration: none;">
+        <header class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="FF Careers Logo">
+                <span class="title">FF Careers</span>
+            </div>
+            <nav>
+                <a href="https://app.ffcareers.app/login" style="text-decoration: none; color:white;" class="login">Log In</a>
+            </nav>
+        </header>
+    </a>
+
+    <section class="hero">
+        <h1>Subprocessors</h1>
+    </section>
+
+    <div class="transition-section"></div>
+
+    <br><br><br><br><br>
+    <div class="whitebg">
+        <section class="terms-of-use">
+            <p class="subprocessors-date">Current as of January 3, 2025</p>
+            <p class="subprocessors-intro">Know exactly where your data is and how it is being used. Below are FF Careers' subprocessors — third-party services that may process data on our behalf.</p>
+
+            <table class="subprocessors-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Purpose</th>
+                        <th>Location</th>
+                        <th>Notes</th>
+                        <th>Website</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AWS (via Docker)</td>
+                        <td>Cloud infrastructure and database hosting</td>
+                        <td>United States</td>
+                        <td>All stored data is encrypted at rest using pgcrypto</td>
+                        <td><a href="https://aws.amazon.com" target="_blank" rel="noopener">https://aws.amazon.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Pinecone</td>
+                        <td>Vector database and semantic search</td>
+                        <td>United States</td>
+                        <td>Only receives numerical embeddings — no raw user content</td>
+                        <td><a href="https://pinecone.io" target="_blank" rel="noopener">https://pinecone.io</a></td>
+                    </tr>
+                    <tr>
+                        <td>Hugging Face</td>
+                        <td>AI embedding model inference</td>
+                        <td>United States</td>
+                        <td>Used to generate embeddings for task recommendations</td>
+                        <td><a href="https://huggingface.co" target="_blank" rel="noopener">https://huggingface.co</a></td>
+                    </tr>
+                    <tr>
+                        <td>Firebase (Google)</td>
+                        <td>Authentication and user identity</td>
+                        <td>United States</td>
+                        <td>Handles user sign-in and session management</td>
+                        <td><a href="https://firebase.google.com" target="_blank" rel="noopener">https://firebase.google.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Railway</td>
+                        <td>Backend hosting and deployment</td>
+                        <td>United States</td>
+                        <td>Hosts the application backend and API</td>
+                        <td><a href="https://railway.app" target="_blank" rel="noopener">https://railway.app</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="transparent.png" alt="Future Forward Logo" class="footer-logo">
+                <p>Get the latest Future Forward updates</p>
+                <div class="email-form">
+                    <input type="email" placeholder="What's your email?" class="email-input">
+                    <button class="demo-button">Keep updated</button>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><strong>Company</strong></li>
+                    <li><a target="_blank" href="#mailto:contact@futureforward.info">Contact</a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/futureforward.info">Instagram</a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/company/future-forward-initiative">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-overlay-row">
+                <img src="greyedout.png" alt="Future Forward Logo" class="footer-overlay-logo">
+                <div class="footer-overlay-text">Future Forward</div>
+            </div>
+
+            <div class="footer-legal">
+                <div class="footer-links">
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="subprocessors.html">Subprocessors</a>
+                </div>
+                <p>© Future Forward 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="auth.js"></script>
+</body>
+
+</html>

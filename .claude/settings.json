@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls /Users/richardli/dev/FF-Careers-Landing && ls /Users/richardli/dev/)",
+      "Read(//Users/richardli/dev/**)",
+      "Bash(npm create *)",
+      "Bash(cd /tmp && npm create vite@latest ff-careers-react -- --template react-ts 2>&1 && ls /tmp/ff-careers-react)",
+      "Read(//tmp/**)",
+      "Bash(npx tailwindcss *)",
+      "Bash(mkdir -p /Users/richardli/dev/FF-Careers-Landing/public/fonts && cp /Users/richardli/dev/FF-Careers-Landing/glacial-indifference/*.otf /Users/richardli/dev/FF-Careers-Landing/public/fonts/ && ls /Users/richardli/dev/FF-Careers-Landing/public/fonts)",
+      "Bash(npm run *)",
+      "Bash(npx vite *)",
+      "Bash(npx lighthouse *)",
+      "Bash(node -e ' *)",
+      "Bash(awk '{print $5, $9}')"
+    ],
+    "additionalDirectories": [
+      "/Users/richardli/dev/FF-Careers-Landing/glacial-indifference"
+    ]
+  }
+}
